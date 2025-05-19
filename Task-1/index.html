@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEJ Application Project</title>
+</head>
+<body>
+    <header>
+        <h1>TEJ Application Project</h1>
+    </header>
+    <hr>
+    <main>
+        <div>
+            <div>
+                <h2>Samosa</h2>
+                <div id="samosa-price">
+                    <label for="samosa">Price:</label>
+                    <input type="number" id="samosa" name="samosa">
+                </div>
+                <div id="samosa-quantity">
+                    <label for="samosa-quantity">Quantity:</label>
+                    <button id="samosa-quantity">+</button>
+                    <p id="samosa-quantity">0</p>
+                    <button id="samosa-quantity">-</button>
+                </div>
+                <div>
+                    Total: 0
+                </div>
+                <style>
+                    #samosa-quantity {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+                    }
+                </style>
+            </div>
+            <hr>
+            <div>
+                <h2>Tea</h2>
+                <div id="tea-price">
+                    <label for="tea">Price:</label>
+                    <input type="number" id="tea" name="tea">
+                </div>
+                <div id="tea-quantity">
+                    <label for="tea-quantity">Quantity:</label>
+                    <button id="tea-quantity">+</button>
+                    <p id="tea-quantity">0</p>
+                    <button id="tea-quantity">-</button>
+                </div>
+                <div>
+                    Total: 0
+                </div>
+                <style>
+                    #tea-quantity {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
+                </style>
+            </div>
+            <hr>
+            <div>
+                <p>Total Price: 0</p>
+                <p>Vat (13%): 0</p>
+                <p>Tax (10%): 0</p>
+            </div>
+            <hr>
+            <div>
+                <p>Grand total: 0</p>
+                <button id="calculateGrandTotal">Calculate grand total</button>
+            </div>
+        </div>
+    </main>
+</html>
