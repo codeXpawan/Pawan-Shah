@@ -1,0 +1,84 @@
+body {
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 16px;
+    background-color: aqua;
+}
+p{
+    margin: 5px;
+    padding: 0px;
+}
+h1 {
+    color: red;
+    text-align: center;
+}
+h3{
+    margin: 5px;
+    padding: 0px;
+}
+
+.Samosa-Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Tea-Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Total-Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Grand-Total-Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.total-price {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+h4 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.value {
+    background-color: white;
+    padding: 3px;
+    padding-inline: 5px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vat{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.tax{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}

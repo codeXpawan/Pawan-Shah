@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEJ Application Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+
+</head>
+<body>
+    <main>
+        <div>
+            <h1>TEJ Application Project</h1>
+            <hr>
+
+            <div class="Samosa-Container">
+                <h3>Samosa</h3>
+                <div id="samosa-price">
+                    <label for="samosa">Price:</label>
+                    <input type="number" id="samosaPrice" min="0" name="samosa">
+                </div>
+                <div id="samosa-quantity">
+                    <label for="samosa-quantity">Quantity:</label>
+                    <button id="samosa-quantity" onclick="increaseSamosaQuantity()">+</button>
+                    <p class="value" id="samosaQuantityValue">0</p>
+                    <button id="samosa-quantity" onclick="decreaseSamosaQuantity()">-</button>
+                </div>
+                <div class="total-price">
+                    <h4>Total: </h4>
+                    <p id="totalSamosaPrice">0</p>
+                </div>
+                <style>
+                    #samosa-quantity {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+                    }
+                </style>
+            </div>
+            <hr>
+            <div class="Tea-Container">
+                <h3>Tea</h3>
+                <div id="tea-price">
+                    <label for="tea">Price:</label>
+                    <input type="number" id="teaPrice" name="tea">
+                </div>
+                <div id="tea-quantity">
+                    <label for="tea-quantity">Quantity:</label>
+                    <button id="tea-quantity" onclick="increaseTeaQuantity()">+</button>
+                    <p class="value" id="teaQuantityValue">0</p>
+                    <button id="tea-quantity" onclick="decreaseTeaQuantity()">-</button>
+                </div>
+                <div class="total-price">
+                    <h4>Total: </h4>
+                    <p id="totalTeaPrice">0</p>
+                </div>
+                <style>
+                    #tea-quantity {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
+                </style>
+            </div>
+            <hr>
+            <div class="Total-Container">
+                <div class="total-price">
+                    <h4>Total Price: </h4>
+                    <p id="TotalPrice">0</p>
+                </div>
+                <div class="vat">
+                    <p>Vat (13%): </p>
+                    <p class="value" id="vatAmount">0</p>
+                </div>
+                <div class="tax">
+                    <p>Tip (10%): </p>
+                    <p class="value" id="tipAmount">0</p>
+                </div>
+            </div>
+            <hr>
+            <div class="Grand-Total-Container">
+                <div class="total-price">
+                    <h4>Grand total: </h4>
+                    <p id="grandTotal">0</p>
+                </div>
+                <button id="calculateGrandTotal" onclick="CalculateGrandTotal()">Calculate grand total</button>
+            </div>
+        </div>
+    </main>
+</html>
