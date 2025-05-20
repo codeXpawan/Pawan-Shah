@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEJ Application Project</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid #333;
+        padding: 8px 12px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Bills</h2>
+         <table>
+            <thead>
+                <tr>
+                    {% comment %} <th>Bill ID</th> {% endcomment %}
+                    <th>Date&amp;time</th>
+                    <th>Grand Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for bill in bills %}
+                <tr>
+                    {% comment %} <td>{{ bill.bill_id }}</td> {% endcomment %}
+                    <td>{{ bill.bill_date }}</td>
+                    <td>{{ bill.bill_amount }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3">No bills found.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+</html>
