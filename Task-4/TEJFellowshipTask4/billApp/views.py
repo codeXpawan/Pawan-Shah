@@ -24,7 +24,7 @@ def submit_data(request):
 def get_bills(request):
     if request.method == 'GET':
         bills = Bill.objects.all()
-        if request.path == '/api/bills/':
+        if request.path == '/api/bills':
             data = []
             for bill in bills:
                 data.append({
@@ -33,7 +33,7 @@ def get_bills(request):
                 })
 
             return JsonResponse(data, safe=False)
-        elif request.path == '/bills/':
+        elif request.path == '/bills':
             return render(request, 'bills.html', {'bills': bills})
         else:
             return JsonResponse({'status': 'error', 'message': 'Invalid path'})

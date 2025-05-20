@@ -22,9 +22,9 @@ from billApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.landing, name='landing'),
-    path('submitBill/', views.submit_data, name='submit_data'),
-    path('submit/<int:bill_id>/', views.get_bill_by_id, name='get_bill_by_id'),
-    path('api/bills/', views.get_bills, name='get_bills'),
-    path('bills/', views.get_bills, name='get_bills')
+    path('submitBill', views.submit_data, name='submit_data'),
+    path('submit/<int:bill_id>', views.get_bill_by_id, name='get_bill_by_id'),
+    path('api/bills', views.get_bills, name='get_bills'),
+    path('bills', views.get_bills, name='get_bills')
     
 ]

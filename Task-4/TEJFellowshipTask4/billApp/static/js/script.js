@@ -71,7 +71,11 @@ const csrftoken = getCookie('csrftoken');
 
 function SubmitBill(){
     const grandTotal = document.getElementById("grandTotal").innerText;
-    fetch('/submitBill/', {
+    if (grandTotal == 0) {
+        console.log("Please calculate the grand total before submitting.");
+        return;
+    }
+    fetch('/submitBill', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -83,7 +87,7 @@ function SubmitBill(){
     })
     .then(response => {
         if (response.ok) {
-            alert("Bill submitted successfully!");
+            // alert("Bill submitted successfully!");
             console.log("response", response);
             return response.json();
             // window.location.href = `/submit/?bill_id=${encodeURIComponent(response.bill_id)}`;
@@ -93,7 +97,7 @@ function SubmitBill(){
     }).then(data => {
         console.log("data", data);
         if (data && data.bill_id) {
-            window.location.href = `/submit/${data.bill_id}/`;
+            window.location.href = `/submit/${data.bill_id}`;
         } else {
             alert("Error: Bill ID not found in response.");
         }
